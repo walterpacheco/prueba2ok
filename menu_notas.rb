@@ -21,15 +21,16 @@ def promedio
 end
 
 def inasistencias
+  aux_arr = {}
     alumno = read_alum('notas.csv')
     alumno.each do |item_line|
       contador=0
         item_line.each_with_index do |elem, index|
           if elem=="A"
             contador = contador+1
-            puts "El alumnos #{item_line[0]} tiene #{contador} ausecias" 
           end
       end
+      puts "El alumnos #{item_line[0]} tiene #{contador} ausecias" 
     end
   end
 
